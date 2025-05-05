@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Background Color</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+        transition: background-color 0.5s ease; /* Suaviza el cambio */
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<h2>Click the button to change the background color</h2>
+
+<button id="colorButton">Change Color</button>
+
+<script>
+    document.getElementById("colorButton").addEventListener("click", function() {
+        changeBackgroundColor();
+    });
+
+    function changeBackgroundColor() {
+        // Colores pastel generando componentes entre 150 y 255
+        var r = Math.floor(Math.random() * 106) + 150; // 150-255
+        var g = Math.floor(Math.random() * 106) + 150;
+        var b = Math.floor(Math.random() * 106) + 150;
+        var pastelColor = `rgb(${r}, ${g}, ${b})`;
+        document.body.style.backgroundColor = pastelColor;
+    }
+</script>
+
+</body>
+</html>
+
